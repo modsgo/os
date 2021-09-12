@@ -1,11 +1,11 @@
-package cmd
+package os
 
 import (
 	"os/exec"
 	"strings"
 )
 
-// Função para executar um comando no SO
+// Cmd executa um comando no sistema operacional
 func Cmd(command string) (r string, e error) {
 	inputcmd := strings.Split(command, " ")
 	cmd := exec.Command(inputcmd[0], inputcmd[1:]...)
